@@ -3,6 +3,7 @@ using Azure.Identity;
 using Microsoft.Graph;
 using Veritrade_Logistica_Service;
 using Veritrade_Logistica_Service.Services;
+using Veritrade_Logistica_Service.Logging;
 
 var builder = Host.CreateApplicationBuilder(args);
 
@@ -34,10 +35,14 @@ var graphClient = new GraphServiceClient(
 // Registrar dependencias
 builder.Services.AddSingleton(graphClient);
 builder.Services.AddSingleton<OneDriveFileService>();
-//builder.Services.AddSingleton<HanaService>();
+builder.Services.AddSingleton<HanaService>();
 
 // Servicio principal
 builder.Services.AddHostedService<Worker>();
+
+// Configuración de Logs
+builder.Logging.ClearProviders();
+builder.Logging.AddProvider(new FileLoggerProvider());
 
 var host = builder.Build();
 
