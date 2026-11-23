@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="../Veritrade_Logistica_Service/Veritrade_Logistica_Service.csproj" Id="9fb53833-cf79-48d1-bfaf-6ffa885409bd" />
+  <Project Path="Veritrade_Service.csproj" />
+</Solution>

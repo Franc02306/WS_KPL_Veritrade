@@ -1,0 +1,49 @@
+﻿# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Compilacion .NET
+**/bin/
+**/obj/
+**/Debug/
+**/Release/
+
+# Archivos temporales
+*.tmp
+*.temp
+*.bak
+*.log
+*.cache
+
+# Resultados de pruebas
+TestResults/
+coverage/
+*.coverage
+*.coveragexml
+
+# Publicacion
+**/publish/
+
+# Configuraciones sensibles
+**/appsettings.json
+**/appsettings.Development.json
+**/appsettings.Production.json
+**/secrets.json
+.env
+.env.*
+
+# Configuraciones de ejemplo
+!**/appsettings.example.json
+!.env.example
+
+# Archivos Excel y datos procesados
+*.xlsx
+*.xls
+*.csv
+
+# Logs
+Logs/
+logs/

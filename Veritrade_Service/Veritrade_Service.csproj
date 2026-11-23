@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-Veritrade_Service-6a4878f3-4c66-41d6-bd87-f040bd4139ab</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Queries\DeleteExporterPeriod.sql" />
+    <None Remove="Queries\DeleteImporterPeriod.sql" />
+    <None Remove="Queries\InsertExporter.sql" />
+    <None Remove="Queries\InsertImporter.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Queries\DeleteExporterPeriod.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Queries\DeleteImporterPeriod.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Queries\InsertExporter.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Queries\InsertImporter.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Azure.Identity" Version="1.21.0" />
+    <PackageReference Include="ClosedXML" Version="0.105.1" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.12" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="10.0.12" />
+    <PackageReference Include="Microsoft.Graph" Version="6.7.0" />
+    <PackageReference Include="Sap.Data.Hana.Net.v10.0" Version="2.30.27" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="appsettings.Development.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+</Project>
